@@ -110,7 +110,7 @@ class _IdCardState extends State<IdCard> {
                               color: Colors.white
                           ),
                         ),
-                        SizedBox(width: 135,),
+                        Spacer(),
                         Icon(Icons.arrow_forward_ios,color: Colors.white, size: 20,),
                         SizedBox(width: 15,),
                       ],
@@ -141,7 +141,7 @@ class _IdCardState extends State<IdCard> {
                               color: Colors.white
                           ),
                         ),
-                        SizedBox(width: 125,),
+                        Spacer(),
                         Icon(Icons.arrow_forward_ios,color: Colors.white, size: 20,),
                         SizedBox(width: 15,),
                       ],
@@ -172,7 +172,7 @@ class _IdCardState extends State<IdCard> {
                               color: Colors.white
                           ),
                         ),
-                        SizedBox(width: 206,),
+                        Spacer(),
                         Icon(Icons.arrow_forward_ios,color: Colors.white, size: 20,),
                         SizedBox(width: 15,),
                       ],
