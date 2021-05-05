@@ -1,2 +1,36 @@
 <uses-permission android:name="android.permission.INTERNET"/>
  use in androidmanifest.xml 
+
+
+Conditional operator/ ternary operator : if-else
+condition ? exp1 : exp2
+des: if condition is true, evaluates exp1 (and return its value); otherwise, evaluates and returns the value of exp2.
+
+Next: 
+exp1 ?? exp2
+des: if exp1 is non-null, returns its value; otherwise and returns the value of exp2.
+
+
+Get data to firebase cloud store:
+StreamBuilder(
+                stream: Firestore.instance.collection('Info').snapshots(),
+                  builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot){
+                    if(!snapshot.hasData){
+                      return Text('no value');
+                    }else{
+                      return Column(
+                        children:
+                          snapshot.data.documents.map((e) {
+                            return Column(
+                              children: [
+                                Text(e['Name'] ?? 'N/A Name'),
+                                Text(e['Address'] ?? 'N/A Address'),
+                                Text(e['Mobile No'] ?? 'N/A Mobile No'),
+                                Text('\n')
+                              ],
+                            );
+                          }).toList()
+                      );
+                    }
+                  }
+              )
