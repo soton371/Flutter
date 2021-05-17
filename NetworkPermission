@@ -34,3 +34,13 @@ StreamBuilder(
                     }
                   }
               )
+
+
+
+//log out 
+GestureDetector(
+              onTap: (){
+                Navigator.pop(context);
+              },
+                child: Icon(Icons.logout)),
+          ),
